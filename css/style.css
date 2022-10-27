@@ -5,6 +5,16 @@ body{
 header, .nav_links, .pricing, .gallery {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header, .nav_links, .gallery {
+  align-content: center;
+}
+
+.pricing{
+  flex-direction:row;
 }
 
 .card, img{
@@ -13,12 +23,6 @@ header, .nav_links, .pricing, .gallery {
 
 header img {
   height: auto;
-}
-
-.nav_links, .card, img{
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
 }
 
 @media screen and (min-width: 700px){
