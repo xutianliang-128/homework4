@@ -1,0 +1,64 @@
+body{
+  font-family: 'Poppins', "sans-serif";
+}
+
+header, .nav_links, .pricing, .gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.card, img{
+  width: 100%;
+}
+
+header img {
+  height: auto;
+}
+
+.nav_links, .card, img{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (min-width: 700px){
+  header, .nav_links, .pricing, .gallery {
+    flex-direction: row;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+
+  .nav_links, .pricing, .gallery{
+    justify-content:center;
+    align-items:stretch;
+  }
+
+  header {
+    justify-content:space-between;
+  }
+
+  header img {
+    width: 400px;
+    height: auto;
+  }
+
+  .card, img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+#logo{
+  animation:fadeIn 3s;
+}
+
+@media(prefers-reduced-motion){
+    #logo{
+      animation:none;
+  }
+}
